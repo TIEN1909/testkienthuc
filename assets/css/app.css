@@ -1,0 +1,664 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+html {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+input,
+textarea,
+select,
+button {
+  outline: none;
+}
+
+input {
+  line-height: normal;
+}
+
+label,
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  line-height: 1;
+  font-family: "Open Sans", sans-serif;
+  color: #4f5665;
+  font-weight: 400;
+  background-color: var(--primary-color);
+  position: relative;
+  overflow-x: hidden;
+}
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin-top: 51px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+.header__logo {
+  width: 140px;
+  height: 65px;
+  overflow: hidden;
+}
+.header__logo > img {
+  object-fit: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.header__list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+.header__item {
+  color: #fff;
+  padding: 0 18px;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 450ms ease-out;
+}
+.header__item:hover {
+  color: #aa8e60;
+}
+.header__icon {
+  font-size: 30px;
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+}
+.heder__icon-close {
+  display: none;
+}
+/* hero */
+.hero {
+  position: relative;
+}
+.hero__slider--counter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 50px;
+}
+.hero__first {
+  font-size: 50px;
+  font-weight: 800;
+}
+.hero__last {
+  font-size: 30px;
+  font-weight: 800;
+}
+.hero__image {
+  position: relative;
+}
+.hero__intro {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  align-items: self-end;
+  flex-direction: column;
+  color: #fff;
+  text-transform: uppercase;
+  left: -10%;
+}
+.hero__intro > h2 {
+  text-align: end;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 36px;
+  width: 80%;
+}
+/* end */
+/* about */
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("http://ceogroup.com.vn/public/images/bg-about.png");
+  background-repeat: no-repeat;
+  padding-top: 80px;
+  background-position: bottom;
+  background-color: #10302a;
+}
+.about_img {
+  background-color: #10302a;
+  position: relative;
+  border-radius: 100%;
+}
+.about_img > img {
+  padding: 5px;
+  border: solid 1px #aa8e60;
+  border-radius: 100%;
+}
+.about__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 36px 0;
+}
+.heading__shared > h2 {
+  font-size: 34px;
+  font-weight: 800;
+  text-align: center;
+  color: #fff;
+}
+
+.about__content > p {
+  font-size: 14px;
+  line-height: 26px;
+  padding: 0 28px;
+}
+.about-details {
+  color: #fff;
+  font-style: italic;
+  font-size: 15px;
+}
+/* business */
+.business {
+  padding-top: 120px;
+  padding-bottom: 97px;
+}
+.business__container {
+  background-image: url("../images/bg-business2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.business__heading {
+  margin-bottom: 50px;
+}
+.business .slick-initialized .slick-slide {
+  margin: 0 10px;
+}
+.business .slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  line-height: 1;
+  z-index: 5;
+  transition: all 0.2s linear;
+  background-color: transparent;
+  color: #fff;
+}
+.business .bi-chevron-left::before,
+.business .bi-chevron-right::before {
+  font-size: 70px;
+}
+.business .slick-list {
+  overflow: inherit;
+}
+.business .slick-prev {
+  left: -80px;
+}
+.business .slick-next {
+  right: -80px;
+}
+.business__image img {
+  width: 100%;
+  height: auto;
+}
+.business__image {
+  z-index: 1;
+  position: relative;
+}
+.business__image::after {
+  content: "";
+  position: absolute;
+  width: 97%;
+  height: 100%;
+  z-index: 999;
+  top: -19px;
+  border: 1px solid #aa8e60;
+  left: 19px;
+}
+.btn__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: uppercase;
+  margin-top: 50px;
+}
+.business__text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.business__text h3 {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 20px;
+  padding: 54px 0;
+  width: 330px;
+  padding-left: 70px;
+  text-align: center;
+}
+.business__text p {
+  color: #fff;
+  font-size: 20px;
+  width: 729px;
+  font-size: 14px;
+  line-height: 25px;
+  margin-bottom: 0;
+}
+.btn__shared {
+  color: #fff;
+  width: 205px;
+  height: 58px;
+  background-color: transparent;
+  border: 1px solid #aa8e60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 800;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
+.btn__shared::after {
+  position: absolute;
+  content: "";
+  width: 195px;
+  height: 70px;
+  border: 1px solid #aa8e60;
+  transition: all 0.5s ease-in-out;
+}
+.btn__shared:hover {
+  background-color: #aa8e60;
+  color: #fff;
+}
+.btn__shared:hover::after {
+  display: none;
+}
+.btn__shared.isActive {
+  background-color: #aa8e60;
+}
+.btn__shared.isActive::after {
+  display: none;
+}
+/* typical */
+.typical__img {
+  padding-top: 65px;
+}
+project-head {
+  background: #092620;
+  padding-top: 68px;
+  padding-bottom: 65px;
+}
+.md-project {
+  background-image: url("http://ceogroup.com.vn/public/images/bg-project.jpg");
+  background-size: 100% auto;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-color: #061e19;
+  padding-top: 85px;
+  padding-bottom: 8px;
+}
+.prj-view img {
+  display: block;
+  width: 100%;
+}
+.prj-view .outline {
+  position: absolute;
+  border: solid 1px #aa8e60;
+  top: -25px;
+  bottom: 25px;
+  left: 20px;
+  right: 20px;
+}
+.prj-view {
+  position: relative;
+}
+.fx-bot {
+  align-items: flex-end;
+}
+
+h3.title {
+  position: relative;
+  padding-left: 30px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: bold;
+  max-width: 375px;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+.item p {
+  font-size: 14px;
+  line-height: 26px;
+  margin-bottom: 15px;
+  color: white;
+}
+.owl-drag {
+  display: grid;
+  grid-template-columns: repeat(3, 3fr);
+  gap: 10px;
+}
+.active_fade {
+  color: #fff;
+  margin-bottom: 100px;
+}
+/* end */
+/* partner */
+.partner {
+  padding: 50px 0;
+}
+.partner__slider {
+  margin-top: 50px;
+}
+.partner__item {
+  display: block;
+}
+.part__item--wrapper {
+  border-radius: 50%;
+  background-color: #afafaf;
+  width: 110px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 450ms ease-in-out;
+}
+.part__item--wrapper:hover {
+  transform: scale(1.2);
+}
+.partner__item img {
+  transform: scale(0.8);
+  width: auto;
+  height: auto;
+}
+.partner .slick-initialized .slick-slide {
+  display: flex;
+  justify-content: center;
+}
+.partner .slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  line-height: 1;
+  z-index: 5;
+  transition: all 0.2s linear;
+  background-color: transparent;
+  color: #fff;
+}
+.partner .bi-chevron-left::before,
+.partner .bi-chevron-right::before {
+  font-size: 70px;
+}
+
+.partner .slick-prev {
+  left: 0;
+}
+.partner .slick-next {
+  right: 0;
+}
+.partner .slick-list {
+  padding: 20px 0;
+}
+/* end */
+/* news */
+.news {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #10302a;
+  width: 100%;
+  z-index: 999;
+  border-top: 1px solid #aa8e60;
+}
+.news__title {
+  color: #fff;
+  font-size: 23px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.news__title > h5 {
+  font-weight: 800;
+}
+.news__item > p {
+  margin-bottom: 3px;
+  color: #fff;
+  font-style: italic;
+  font-size: 12px;
+}
+.news__item > a {
+  font-size: 14px;
+  color: #fff;
+  transition: all 450ms ease-in-out;
+  line-height: 1.5;
+}
+.news__item > a:hover {
+  color: #aa8e60;
+}
+.news .slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  line-height: 1;
+  z-index: 5;
+  transition: all 0.2s linear;
+  background-color: transparent;
+  color: #fff;
+  font-weight: bold;
+}
+
+.news .slick-prev {
+  left: -55px;
+  font-weight: 800;
+}
+.news .slick-next {
+  right: -20px;
+}
+.news .slick-list {
+  padding: 10px 0;
+}
+/* end */
+/* footer */
+.footer {
+  background-image: url("http://ceogroup.com.vn/public/images/bg-foot.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 35px;
+  padding-bottom: 20px;
+}
+.footer__container {
+  color: #fff;
+}
+.footer__container h4 {
+  font-size: 14px;
+  font-weight: 800;
+}
+.footer__link {
+  font-size: 14px;
+  color: #fff;
+  transition: all 450ms ease;
+}
+.footer__link:hover {
+  color: #aa8e60;
+}
+.footer__link.map {
+  color: #aa8e60;
+}
+.footer__quick-link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px 0;
+}
+.footer__social {
+  display: flex;
+  margin-bottom: 15px;
+}
+.footer-px {
+  height: 78px;
+}
+@media (max-width: 1023px) {
+  .header {
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  .header__list {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: max-content;
+    background-color: #10302a;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 50px;
+    transform: translateX(-100%);
+    transition: all 450ms ease-in-out;
+  }
+  .header__list.is-show {
+    transform: translateX(0);
+  }
+  .header__item {
+    padding: 10px 30px 10px 25px;
+    display: block;
+  }
+  .header__logo {
+    padding-left: 30px;
+  }
+  .header__logo > img {
+    object-fit: contain;
+  }
+  .header__icon {
+    padding-right: 20px;
+  }
+  .business__text h3 {
+    padding-left: 0;
+  }
+}
+/* Mobile */
+@media (max-width: 739px) {
+  .hero__intro > h2 {
+    font-size: 16px;
+    text-align: center;
+    width: 90%;
+  }
+  .hero__intro > p {
+    display: none;
+  }
+  .about__content > p {
+    font-size: 14px;
+
+    display: block;
+    display: -webkit-box;
+    height: 16px * 1.3 * 3; /* Fallback for non-webkit */
+    line-height: 1.3;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .heading__shared > h2 {
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
+  .about__content {
+    top: 34%;
+    gap: 11px 0;
+  }
+  .business {
+    padding-top: 55px;
+  }
+  .business__text p {
+    margin-bottom: 20px;
+  }
+  .business__text p,
+  .business__text h3 {
+    width: auto;
+  }
+  .business__text h3 {
+    padding: 0;
+  }
+  .business__text {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+  .btn__container {
+    display: none;
+  }
+  .part__item--wrapper {
+    width: 75px;
+    height: 75px;
+  }
+
+  .partner .bi-chevron-left::before,
+  .partner .bi-chevron-right::before {
+    font-size: 49px;
+  }
+  .partner .slick-prev {
+    left: -15px;
+  }
+  .partner .slick-next {
+    right: -15px;
+  }
+  .news {
+    position: static;
+  }
+  .footer-px {
+    display: none;
+  }
+}
