@@ -34,7 +34,11 @@
   <body>
     <header class="header">
       <a href="#" class="header__logo">
-        <img src="./assets/images/logo_banner.png" alt="" />
+        <img
+          src="./assets/images/logo_banner.png"
+          alt=""
+          class="header__logo__img"
+        />
       </a>
       <ul class="header__list">
         <li><a href="#" class="header__item">TRANG CHỦ</a></li>
@@ -48,11 +52,11 @@
         <li><a href="#" class="header__item">TUYỂN DỤNG</a></li>
       </ul>
       <span class="header__icon">
-        <i class="bi bi-list"></i>
-      </span>
-      <span class="heder__icon-close">
         <i class="bi bi-x-lg"></i>
       </span>
+      <div class="heder__icon-close">
+        <i class="bi bi-list"></i>
+      </div>
     </header>
     <!-- chưa xong -->
     <section class="hero">
@@ -100,9 +104,12 @@
           </div>
         </div>
       </div>
-      <div class="hero__slider--counter">
-        <span class="hero__first">1</span>/ <span class="hero__last">3</span>
+      <span class="hero__line--top"></span>
+      <div class="hero__slider--counter">1/4</div>
+      <div class="hero__mouse--wrapper">
+        <span class="hero__mouse">1</span>
       </div>
+      <span class="hero__line--bottom"></span>
     </section>
     <!-- chưa xong -->
     <section class="about">
@@ -124,6 +131,9 @@
       </div>
     </section>
     <section class="business">
+      <div class="business__boxs">
+        <div class="business__box"></div>
+      </div>
       <div class="business__container">
         <div class="heading__shared business__heading">
           <h2>LĨNH VỰC KINH DOANH</h2>
@@ -188,104 +198,139 @@
             </div>
 
             <div class="btn__container">
-              <a href="#" class="btn__shared isActive">bất động sản</a>
-              <a href="#" class="btn__shared">xây dựng</a>
-              <a href="#" class="btn__shared">dịch vụ</a>
+              <button class="btn__shared" id="button1">bất động sản</button>
+              <button class="btn__shared" id="button2">xây dựng</button>
+              <button class="btn__shared" id="button3">dịch vụ</button>
             </div>
           </div>
         </div>
       </div>
     </section>
     <section class="typical">
-      <div class="heading__shared">
+      <div class="heading__shared typical__content">
         <h2>DỰ ÁN TIÊU BIỂU</h2>
       </div>
       <!--slider  -->
-      <div class="project-head"></div>
-      <section class="md-project">
+      <div class="project">
         <div class="container">
-          <div class="row fx-bot">
-            <div class="col-md-5">
-              <div class="prj-view">
-                <div class="prj-img prl prl-2">
-                  <img
-                    src="http://ceogroup.com.vn/public/media//thumb/linh-vuc-kinh-doanh/dsc_6446_copy-601x830.jpg"
-                    alt=""
-                  />
-                </div>
-                <span
-                  class="outline prl prl-1"
-                  style="transform: translateY(1.13863px)"
-                ></span>
-              </div>
-            </div>
-            <div
-              class="col-md-7"
-              style="
-                visibility: visible;
-                animation-delay: 0.3s;
-                animation-name: fadeInRight;
-              "
-            >
-              <div class="item active_fade">
-                <h3 class="title">Khu đô thị Sunny Garden City</h3>
-                <p>
-                  Tọa lạc tại Quốc Oai (Hà Nội) Sunny Garden City là dự án khu
-                  đô thị được đầu tư quy hoạch hạ tầng đồng bộ theo tiêu chuẩn
-                  quốc tế nhằm kiến tạo môi trường sống lý tưởng dành cho người
-                  dân Thủ đô.
-                </p>
-                <a href="" class="smooth more"> Chi tiết >> </a>
-              </div>
-              <div class="pfj-cas prl">
-                <div class="owl-carousel owl-loaded owl-drag">
-                  <div class="item_image">
-                    <img
-                      src="http://ceogroup.com.vn/public/media//thumb/linh-vuc-kinh-doanh/view_8-256x126.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div class="item_image">
-                    <img
-                      src="http://ceogroup.com.vn/public/media//thumb/linh-vuc-kinh-doanh/view_8-256x126.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div class="item_image">
-                    <img
-                      src="http://ceogroup.com.vn/public/media//thumb/linh-vuc-kinh-doanh/view_8-256x126.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div class="item_image">
-                    <img
-                      src="http://ceogroup.com.vn/public/media//thumb/linh-vuc-kinh-doanh/view_8-256x126.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div class="item_image">
-                    <img
-                      src="http://ceogroup.com.vn/public/media//thumb/linh-vuc-kinh-doanh/view_8-256x126.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div class="item_image">
-                    <img
-                      src="http://ceogroup.com.vn/public/media//thumb/linh-vuc-kinh-doanh/view_8-256x126.jpg"
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="slider-project">
+            <ul class="slider-for">
+              <li>
+                <img
+                  src="http://ceogroup.com.vn/public/media//thumb/linh-vuc-kinh-doanh/dsc_6446_copy-256x126.jpg"
+                  alt=""
+                />
+              </li>
+              <li>
+                <img
+                  src="http://ceogroup.com.vn/public/media//thumb/linh-vuc-kinh-doanh/view_8-256x126.jpg"
+                  alt=""
+                />
+              </li>
+              <li>
+                <img
+                  src="http://ceogroup.com.vn/public/media//thumb/linh-vuc-kinh-doanh/dji_0038-256x126.jpg"
+                  alt=""
+                />
+              </li>
+              <li>
+                <img
+                  src="http://ceogroup.com.vn/public/media//thumb/linh-vuc-kinh-doanh/anh_du_an_-_resize/dji_0114-edit-256x126.jpg"
+                  alt=""
+                />
+              </li>
+              <li>
+                <img
+                  src="http://ceogroup.com.vn/public/media//thumb/linh-vuc-kinh-doanh/13920115_1420420297974472_3556444191355222674_o-256x126.jpg"
+                  alt=""
+                />
+              </li>
+              <li>
+                <img
+                  src="http://ceogroup.com.vn/public/media//thumb/linh-vuc-kinh-doanh/view_8-256x126.jpg"
+                  alt=""
+                />
+              </li>
+              <li>
+                <img
+                  src="http://ceogroup.com.vn/public/media//thumb/linh-vuc-kinh-doanh/anh_du_an_-_resize/dji_0114-edit-256x126.jpg"
+                  alt=""
+                />
+              </li>
+              <li>
+                <img
+                  src="http://ceogroup.com.vn/public/media//thumb/linh-vuc-kinh-doanh/dsc_6446_copy-256x126.jpg"
+                  alt=""
+                />
+              </li>
+            </ul>
+
+            <ul class="slider-nav">
+              <li>
+                <img
+                  src="http://ceogroup.com.vn/public/media//thumb/linh-vuc-kinh-doanh/dsc_6446_copy-256x126.jpg"
+                  alt=""
+                />
+                <h4>bambo garden</h4>
+              </li>
+              <li>
+                <img
+                  src="http://ceogroup.com.vn/public/media//thumb/linh-vuc-kinh-doanh/view_8-256x126.jpg"
+                  alt=""
+                />
+                <h4>bambo garden</h4>
+              </li>
+              <li>
+                <img
+                  src="http://ceogroup.com.vn/public/media//thumb/linh-vuc-kinh-doanh/dji_0038-256x126.jpg"
+                  alt=""
+                />
+                <h4>bambo garden</h4>
+              </li>
+              <li>
+                <img
+                  src="http://ceogroup.com.vn/public/media//thumb/linh-vuc-kinh-doanh/anh_du_an_-_resize/dji_0114-edit-256x126.jpg"
+                  alt=""
+                />
+                <h4>bambo garden</h4>
+              </li>
+              <li>
+                <img
+                  src="http://ceogroup.com.vn/public/media//thumb/linh-vuc-kinh-doanh/13920115_1420420297974472_3556444191355222674_o-256x126.jpg"
+                  alt=""
+                />
+                <h4>bambo garden</h4>
+              </li>
+              <li>
+                <img
+                  src="http://ceogroup.com.vn/public/media//thumb/linh-vuc-kinh-doanh/view_8-256x126.jpg"
+                  alt=""
+                />
+                <h4>bambo garden</h4>
+              </li>
+              <li>
+                <img
+                  src="http://ceogroup.com.vn/public/media//thumb/linh-vuc-kinh-doanh/anh_du_an_-_resize/dji_0114-edit-256x126.jpg"
+                  alt=""
+                />
+                <h4>bambo garden</h4>
+              </li>
+              <li>
+                <img
+                  src="http://ceogroup.com.vn/public/media//thumb/linh-vuc-kinh-doanh/dsc_6446_copy-256x126.jpg"
+                  alt=""
+                />
+                <h4>bambo garden</h4>
+              </li>
+            </ul>
           </div>
         </div>
-      </section>
+      </div>
       <!--end  -->
     </section>
     <section class="partner">
       <div class="container">
-        <div class="heading__shared">
+        <div class="heading__shared partner__content">
           <h2>ĐỐI TÁC</h2>
         </div>
         <div class="partner__slider">
@@ -396,7 +441,7 @@
       <div class="container">
         <div class="footer__container">
           <div class="row">
-            <div class="col-lg-2">
+            <div class="col-lg-2 col-md-4">
               <a href="#">
                 <img
                   src="http://ceogroup.com.vn/public/media//logo/logo_footer.png"
@@ -405,7 +450,7 @@
                 />
               </a>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-8">
               <h4>TẬP ĐOÀN CEO</h4>
               <p>
                 <span><i class="bi bi-geo-alt-fill"></i></span>
@@ -421,11 +466,11 @@
                 Email: info@ceogroup.com.vn
               </p>
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-2 col-md-4 mt-2">
               <h4>HỖ TRỢ</h4>
               <a href="#" class="footer__link">Nội bộ</a>
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-2 col-md-4 mt-2">
               <h4>QUICK LINK</h4>
               <div class="footer__quick-link">
                 <a href="#" class="footer__link">Giới thiệu</a>
@@ -434,7 +479,7 @@
                 <a href="#" class="footer__link">Liên hệ</a>
               </div>
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-2 col-md-4 mt-2">
               <h4>KẾT NỐI VỚI CEO</h4>
               <div class="footer__social">
                 <a href="#">
@@ -475,6 +520,22 @@
       </div>
     </footer>
     <div class="footer-px"></div>
+    <script>
+      const header = document.querySelector(".header");
+      const news = document.querySelector(".news");
+      const logo = document.querySelector(".header__logo__img");
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 0) {
+          header.classList.add("header--sticky");
+          logo.classList.add("header__logo--run");
+          news.classList.add("news__opacity");
+        } else {
+          header.classList.remove("header--sticky");
+          logo.classList.remove("header__logo--run");
+          news.classList.remove("news__opacity");
+        }
+      });
+    </script>
     <script
       type="text/javascript"
       src="https://code.jquery.com/jquery-1.11.0.min.js"
@@ -497,6 +558,7 @@
       integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
       crossorigin="anonymous"
     ></script>
+
     <script src="./assets/js/app.js"></script>
   </body>
 </html>

@@ -1,11 +1,14 @@
-const toggle = document.querySelector(".header__icon ");
+// -------------------------
+const toggle = document.querySelector(".heder__icon-close ");
 const menu = document.querySelector(".header__list");
 const activeClass = "is-show";
-toggle.addEventListener("click", function () {
+const headerIcon = "header__icon";
+toggle.addEventListener("click", function (e) {
+  e.stopPropagation();
   menu.classList.add(activeClass);
 });
 window.addEventListener("click", function (e) {
-  if (!menu.contains(e.target) && !e.target.matches(".header__icon")) {
+  if (!menu.contains(e.target) && !e.target.matches(".heder__icon-close")) {
     menu.classList.remove(activeClass);
   }
 });
@@ -18,7 +21,7 @@ $(document).ready(function () {
     draggable: true,
     prevArrow: `<button type='button' class='slick-prev slick-arrow'><i class="bi bi-chevron-left"></i></button>`,
     nextArrow: `<button type='button' class='slick-next slick-arrow'><i class="bi bi-chevron-right"></i></button>`,
-    dots: false,
+    dots: true,
     responsive: [
       {
         breakpoint: 1025,
@@ -35,8 +38,6 @@ $(document).ready(function () {
         },
       },
     ],
-    // autoplay: true,
-    // autoplaySpeed: 1000,
   });
   $(".hero__conatiner").on(
     "afterChange",
@@ -45,6 +46,25 @@ $(document).ready(function () {
       counter.text(currentSlide + 1 + "/" + slick.slideCount);
     }
   );
+  const slider = $(".business__image--slider");
+
+  $("#button1").click(function () {
+    slider.slick("slickGoTo", -1);
+    $(this).toggleClass("isActive");
+    $("#button2, #button3").removeClass("isActive");
+  });
+
+  $("#button2").click(function () {
+    slider.slick("slickGoTo", 0);
+    $(this).toggleClass("isActive");
+    $("#button1, #button3").removeClass("isActive");
+  });
+
+  $("#button3").click(function () {
+    slider.slick("slickGoTo", 1);
+    $(this).toggleClass("isActive");
+    $("#button1, #button2").removeClass("isActive");
+  });
   $(".business__image--slider").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -74,8 +94,6 @@ $(document).ready(function () {
         },
       },
     ],
-    // autoplay: true,
-    // autoplaySpeed: 1000,
   });
   $(".partner__slider").slick({
     slidesToShow: 5,
@@ -103,8 +121,6 @@ $(document).ready(function () {
         },
       },
     ],
-    // autoplay: true,
-    // autoplaySpeed: 1000,
   });
   $(".news__slider").slick({
     slidesToShow: 3,
@@ -119,7 +135,7 @@ $(document).ready(function () {
       {
         breakpoint: 1025,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
         },
       },
       {
@@ -131,33 +147,42 @@ $(document).ready(function () {
         },
       },
     ],
-    // autoplay: true,
-    // autoplaySpeed: 1000,
   });
-  // Khởi tạo slider-for và slider-nav
-  $(".slider-for").slick({
+
+  $(".slider-project .slider-for").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
     fade: true,
-    asNavFor: ".slider-nav",
+    asNavFor: ".slider-project .slider-nav",
   });
-  $(".slider-nav").slick({
+  $(".slider-project .slider-nav").slick({
     slidesToShow: 3,
     slidesToScroll: 1,
-    asNavFor: ".slider-for",
+    asNavFor: ".slider-project .slider-for",
     dots: false,
+    centerMode: false,
     focusOnSelect: true,
-  });
-
-  // Bắt sự kiện click vào đối tượng
-  $(".item").click(function (e) {
-    e.preventDefault();
-    // Lấy chỉ số slide tương ứng với đối tượng được click
-    var slideno = $(this).data("slide");
-    // Chuyển đổi trang slider-nav đến slide tương ứng
-    $(".slider-nav").slick("slickGoTo", slideno - 1);
-    // Cập nhật slide hiển thị của slider-for để hiển thị hình ảnh tương ứng
-    $(".slider-for").slick("slickGoTo", slideno - 1);
+    rows: 2,
+    prevArrow:
+      '<button type="button" class="slick-prev"><i class="bi bi-chevron-left"></i></button>',
+    nextArrow:
+      '<button type="button" class="slick-next"><i class="bi bi-chevron-right"></i></button>',
+    responsive: [
+      {
+        breakpoint: 1025,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+          infinite: false,
+        },
+      },
+    ],
   });
 });
